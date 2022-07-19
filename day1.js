@@ -5,7 +5,7 @@ _____________________________________JS INTERVIEW PREP DAY-1____________________
 Q.1. What is the difference between == && ===?
 
 - Double equals (==) will perform a type conversion when comparing two things.
-- Loose equality compares two values for equality after converting both values to a common type. 
+- Loose equality == compares two values for equality after converting both values to a common type. 
   After conversions (one or both sides may undergo conversions), 
   the final equality comparison is performed exactly as === performs it.
 - Loose equality is symmetric: A == B always has identical semantics to B == A 
