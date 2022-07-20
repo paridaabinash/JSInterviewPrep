@@ -52,13 +52,29 @@ Q.3.What is the difference between var, let and const?
 1.  var declarations are globally scoped/ function scoped because whatever variables declared using var
     it get attached to the window object, thats why we can access it anywhere in the code even inside functions
     while let and const are block scoped.
+    ex- var a = 10;
+    function(){
+      i can access a variable here
+    }
 2.  var variables can be updated and re-declared within its scope; 
     let variables can be updated but not re-declared; 
     const variables can neither be updated nor re-declared.
+    ex- var b = 10;
+        var b = 12; // it will work
+        let c = 5;
+        let c = 6; // this wont work same as const can not be redeclared
+        but we can update let variable.
+        c = 6; // it will work.
+        
 3.  They all undergo hoisting to the top of their scope, but while var variables are 
     initialized with undefined, let and const variables are not initialized.
 4.  While var and let can be declared without being initialized,
     const must be initialized during declaration.
+    ex- we can do let d; or var e;
+    but we cant do const f; we have to initialize it with a value.
+    
+
+
 
 
 Q.4.What is execution context?
@@ -83,4 +99,29 @@ Q.5.What is meant by first class functions?
   1. a function can be passed as an argument to other functions, 
   2. can be returned by another function and
   3. can be assigned as a value to a variable.
+  ex- 
+  const foo = function() {
+   console.log("foobar");
+}
+foo(); // Invoke it using the variable
+// foobar
+
+ex-
+
+function sayHello() {
+   return "Hello, ";
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+
+ex-
+function sayHello() {
+   return function() {
+      console.log("Hello!"); // return a function in another function
+   }
+}
 */
